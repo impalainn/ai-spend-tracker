@@ -1,0 +1,34 @@
+{
+  "name": "ai-spend-watchdog",
+  "version": "0.0.0",
+  "type": "module",
+  "imports": {
+    "#*": "./agent/*",
+    "#evals/*": "./evals/*"
+  },
+  "scripts": {
+    "build": "eve build",
+    "deploy": "eve deploy",
+    "dev": "eve dev",
+    "eval": "eve eval --exclude-tag live",
+    "eval:live": "eve eval --tag live",
+    "start": "eve start",
+    "typecheck": "tsc",
+    "test": "node --test test/*.test.ts",
+    "live-check": "node --env-file=.env.local scripts/live-check.ts"
+  },
+  "dependencies": {
+    "@vercel/connect": "2.5.2",
+    "ai": "^7.0.137",
+    "eve": "^0.83.2",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "24.x",
+    "just-bash": "^3.6.0",
+    "typescript": "7.0.2"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}
