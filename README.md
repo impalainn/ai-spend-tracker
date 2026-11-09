@@ -1,4 +1,4 @@
-# ai-spend-watchdog
+# ai-spend-tracker
 
 An [eve](https://eve.dev) agent that explains changes in a team's [Vercel AI Gateway](https://vercel.com/docs/ai-gateway) spend. It compares the last 7 days with the 7 days before, finds which models, request tags, and days moved, says why (more requests, longer prompts, a pricier model, low cache use), and suggests what to check. You can ask it in chat, and a daily schedule saves a report.
 
